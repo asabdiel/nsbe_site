@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>NSBE Upstate Zone — Resource Hub</title>
+    <link rel="stylesheet" href="site.css">
+    <link rel="icon" href="assets/nsbe_logo.png" type="image/png">
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <img class="site-logo" src="assets/nsbe_logo.png" alt="NSBE Upstate" />
+        <div class="hero">
+          <h1>NSBE Upstate Zone Resource Hub</h1>
+          <div class="tagline">Build • Connect • Innovate</div>
+        </div>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <nav id="main-nav" class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="directory.html">Zone Board</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+       
+
+        <section class="welcome">
+          <img src="assets/welcome.png" alt="Welcome" />
+          <div class="welcome-text">
+            <h3>Welcome to the NSBE Upstate Zone Resource Hub</h3>
+            <p>Find official documents, leadership training materials, calendars, and chapter resources curated by the Zone Board. Use the navigation above to access directories, forms, and event information.</p>
+          </div>
+        </section>
+         <section class="announcements">
+          <h2>Announcements</h2>
+          <ul>
+            <li class="announcement-item"><strong>Spring Zone Conference:</strong> Registration opens March 1, consider submitting proposals.</li>
+            <li class="announcement-item"><strong>CMR Deadline:</strong> Chapter Monthly Reports due the last day of each month.</li>
+          </ul>
+        </section>
+
+        <section class="spotlight">
+          <h2>Chapter Spotlight</h2>
+          <div class="grid">
+            <div class="card">
+              <img src="assets/nsbe_logo.png" alt="Chapter image" />
+                <h4>Chapter: Upstate University</h4>
+                <p>Highlight: Successful outreach event with local high school students — read the recap and download templates.</p>
+                <a class="read-more" href="#">Read more →</a>
+            </div>
+            <div class="card">
+              <img src="assets/welcome_image.svg" alt="Chapter image" />
+                <h4>Chapter: City College</h4>
+                <p>Highlight: Fundraising workshop and sponsor connections. Resources available in Finance section.</p>
+                <a class="read-more" href="#">Read more →</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>Contact: <a href="mailto:zonechair@nsbeupstate.org">zonechair@nsbeupstate.org</a> · Office hours: Mon–Fri 6–8pm · © NSBE Upstate Zone</div>
+        <div class="social-links" aria-label="Follow NSBE Upstate">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <img src="assets/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <img src="assets/linkedin.svg" alt="LinkedIn" />
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script>
+      // Mobile nav toggle
+      (function(){
+        const btn = document.querySelector('.nav-toggle');
+        const nav = document.getElementById('main-nav');
+        if (!btn || !nav) return;
+        btn.addEventListener('click', function(){
+          const isOpen = nav.classList.toggle('open');
+          btn.setAttribute('aria-expanded', String(isOpen));
+        });
+      })();
+    </script>
+  </body>
+</html>

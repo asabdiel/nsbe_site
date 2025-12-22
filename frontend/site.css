@@ -1,0 +1,125 @@
+/* Site-wide styles extracted from index.html */
+
+:root{
+  --bg: #ffffff;
+  --text: #000000;
+  --muted: #666666;
+  --accent: #0B6E4F; /* dark green accent */
+}
+
+/* Global layout */
+*{box-sizing:border-box}
+body {
+  font-family: system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  /* neutral gray site background */
+  background: linear-gradient(180deg, #f5f6f8 0%, #eceef0 100%);
+  color: var(--text);
+  line-height:1.4;
+}
+
+.container{max-width:1100px;margin:28px auto;padding:28px;background:#ffffff;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+
+header.site-header{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:20px;
+  /* transparent header (no green background) */
+  background: transparent;
+  color: var(--text);
+  border-radius:8px;
+  border-bottom: 1px solid #eef3ef;
+}
+
+/* Logo */
+.site-logo{width:72px;height:auto;display:block}
+
+/* Navigation */
+nav.site-nav{margin-left:auto}
+nav.site-nav ul{display:flex;gap:10px;list-style:none;margin:0;padding:0}
+nav.site-nav a{display:inline-block;padding:8px 12px;color:var(--text);text-decoration:none;border-radius:6px}
+nav.site-nav a:hover{background:#f2f2f2}
+/* active state uses green accent */
+nav.site-nav a.active{background:var(--accent);color:#fff;font-weight:600}
+
+.hero{margin-top:8px}
+.hero h1{margin:0;font-size:1.6rem}
+.hero .tagline{color:var(--muted);margin-top:6px}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 16px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background: #fff;
+}
+.card strong{color:var(--accent)}
+
+h2{margin-top:28px;color:var(--accent)}
+
+/* Footer styling - make it stand out */
+/* Footer — restore green accent background */
+/* Footer — transparent, no green background */
+footer.site-footer{margin-top:36px;color:var(--muted);padding:18px 22px;background:transparent;border-radius:6px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:12px}
+footer.site-footer a{color:var(--accent)}
+footer.site-footer .social-links a{background:transparent}
+footer.site-footer .social-links img{width:20px;height:20px;display:block;filter:none;opacity:0.9}
+
+/* Small utilities */
+.muted{color:var(--muted)}
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  .container{padding:18px}
+  nav.site-nav ul{flex-wrap:wrap;gap:6px}
+}
+
+/* Hamburger nav for small screens */
+.nav-toggle{display:none;border:0;background:transparent;padding:8px;border-radius:6px}
+.nav-toggle .hamburger{display:block;width:22px;height:2px;background:var(--text);position:relative}
+.nav-toggle .hamburger::before, .nav-toggle .hamburger::after{content:'';position:absolute;left:0;width:22px;height:2px;background:var(--text);}
+.nav-toggle .hamburger::before{top:-7px}
+.nav-toggle .hamburger::after{top:7px}
+
+@media (max-width:800px){
+  .nav-toggle{display:inline-flex;align-items:center;margin-left:auto}
+  nav.site-nav{position:absolute;top:72px;right:28px;background:#fff;border:1px solid #eaeaea;border-radius:8px;padding:12px;display:none;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+  nav.site-nav.open{display:block}
+  nav.site-nav ul{display:flex;flex-direction:column;gap:8px}
+  nav.site-nav a{color:var(--text);padding:8px}
+}
+
+/* Welcome section */
+.welcome{display:flex;gap:20px;align-items:center;margin:20px 0;padding:18px;background:#fff;border:1px solid #eee;border-radius:10px}
+.welcome img{width:320px;max-width:40%;height:auto;border-radius:8px}
+.welcome .welcome-text{flex:1}
+.welcome .welcome-text h3{margin:0 0 8px 0;color:var(--accent)}
+.welcome .welcome-text p{margin:0;color:var(--muted)}
+
+/* Footer social links */
+.site-footer{display:flex;flex-direction:row;justify-content:space-between;align-items:center}
+.site-footer .social-links{display:flex;gap:12px}
+.site-footer .social-links a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:6px;background:transparent}
+.site-footer .social-links img, .site-footer .social-links svg{width:20px;height:20px;display:block}
+
+/* Spotlight and image rules */
+.spotlight{margin-top:22px}
+.spotlight .grid{gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.spotlight .card{display:flex;flex-direction:column;align-items:flex-start;padding:12px}
+.spotlight .card img{width:100%;max-width:100%;height:160px;object-fit:cover;border-radius:6px;margin-bottom:10px}
+.spotlight .card h4{margin:0 0 6px 0;color:var(--accent)}
+
+/* Announcements heading */
+.announcements h4{color:var(--accent);margin:0 0 8px 0}
+.spotlight .card p{margin:0;color:var(--muted);font-size:0.95rem}
+.spotlight .card .read-more{margin-top:10px;color:var(--accent);text-decoration:none;font-weight:600}
+
+/* Ensure images never overflow their containers */
+img{max-width:100%;height:auto;display:block}

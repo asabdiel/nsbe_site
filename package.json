@@ -1,0 +1,12 @@
+{
+  "name": "resource_hub_nsbe",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "start:backend": "node backend/index.js"
+  }
+}
