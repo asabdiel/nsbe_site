@@ -12,27 +12,95 @@
       <header class="site-header">
         <img class="site-logo" src="assets/nsbe_logo.png" alt="NSBE Upstate" />
         <div class="hero">
-          <h1>Contact Zone Board</h1>
-          <div class="tagline">Emails, office hours, and contact forms</div>
+          <h1>Upstate Zone Chapters</h1>
+          <div class="tagline">Chapter snapshots</div>
         </div>
-        <nav class="site-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <nav id="main-nav" class="site-nav" aria-label="Main navigation">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Zone Board</a></li>
             <li><a href="resources.html">Resources</a></li>
             <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html" class="active">Chapters</a></li>
           </ul>
         </nav>
       </header>
 
       <main>
         <section>
-          <p class="muted">Contact placeholder — add emails and an embedded form (Google Form) here.</p>
+          <h2>NSBE Chapters in Upstate Zone</h2>
+          <div class="grid">
+            
+            <div class="card">
+              <img src="img/rit.png" alt="Rochester Institute of Technology" />
+              <h4><a href="https://www.rit.edu/">Rochester Institute of Technology</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/buffalo.png" alt="University at Buffalo" />
+              <h4><a href="https://engineering.buffalo.edu/home/diversity-inclusion/resources-support/students-of-color.host.html/content/shared/engineering/school-wide-content/clubs/seas/nsbe.detail.html">University at Buffalo</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/syracuse.png" alt="Syracuse University" />
+              <h4><a href="https://www.instagram.com/nsbe_su/?hl=en">Syracuse University</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/rpi.jpeg" alt="Rensselaer Polytechnic Institute" />
+              <h4><a href="https://nsberpitcomm.wixsite.com/nsbe">Rensselaer Polytechnic Institute</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/bing.png" alt="Binghamton University" />
+              <h4><a href="https://nsbe.binghamtonsa.org/">Binghamton University</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/cornelll.jpeg" alt="Cornell University" />
+              <h4><a href="https://nsbe.engineering.cornell.edu/">Cornell University</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/union.png" alt="Union College" />
+              <h4><a href="https://www.instagram.com/union_nsbe/?hl=en">Union College</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/paltz.png" alt="SUNY New Paltz" />
+              <h4><a href="https://www.instagram.com/nsbenp/?hl=en">SUNY New Paltz</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/buff state.png" alt="Buffalo State University" />
+              <h4><a href="https://www.instagram.com/bscnsbe/?hl=en">Buffalo State University</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/clark.jpeg" alt="Clarkson University" />
+              <h4><a href="https://www.nsbeclarkson.com/">Clarkson University</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/roch.png" alt="University of Rochester" />
+              <h4><a href="https://ccc.rochester.edu/nsbe/home/">University of Rochester</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/oswego.png" alt="SUNY Oswego" />
+              <h4><a href="https://www.instagram.com/nsbe_oswego/?hl=en">SUNY Oswego</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/albany.png" alt="SUNY Albany" />
+              <h4><a href="https://www.instagram.com/nsbe_ua/?hl=en">SUNY Albany</a></h4>
+            </div>
+            <div class="card">
+              <img src="img/skidmore.png" alt="Skidmore College" />
+              <h4><a href="https://careers.nsbe.org/profile/skidmore-college/307655/">Skidmore College</a></h4>
+            </div>
+
+          </div>
         </section>
       </main>
 
       <footer class="site-footer">Contact: <a href="mailto:zonechair@nsbeupstate.org">zonechair@nsbeupstate.org</a> · Office hours: Mon–Fri 6–8pm · © NSBE Upstate Zone</footer>
     </div>
+    <script>
+      document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('.site-nav').classList.toggle('open');
+      });
+    </script>
   </body>
 </html>
